@@ -1,0 +1,59 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="none" stroke="#444444" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    
+    <pattern id="blockchain" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="url(#grid)"/>
+      
+      <!-- Nodes -->
+      <circle cx="50" cy="50" r="10" fill="#555555" opacity="0.4"/>
+      <circle cx="150" cy="50" r="8" fill="#555555" opacity="0.4"/>
+      <circle cx="50" cy="150" r="12" fill="#555555" opacity="0.4"/>
+      <circle cx="150" cy="150" r="9" fill="#555555" opacity="0.4"/>
+      <circle cx="100" cy="100" r="15" fill="#555555" opacity="0.4"/>
+      
+      <!-- Connections -->
+      <line x1="50" y1="50" x2="150" y2="50" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="50" y1="50" x2="50" y2="150" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="50" y1="50" x2="100" y2="100" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="150" y1="50" x2="150" y2="150" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="150" y1="50" x2="100" y2="100" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="50" y1="150" x2="150" y2="150" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="50" y1="150" x2="100" y2="100" stroke="#666666" stroke-width="1" opacity="0.3"/>
+      <line x1="150" y1="150" x2="100" y2="100" stroke="#666666" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#1a1a2e"/>
+  <rect width="100%" height="100%" fill="url(#blockchain)"/>
+  
+  <!-- Extra nodes and connections for uniqueness -->
+  <g opacity="0.5">
+    <circle cx="200" cy="150" r="20" fill="#444444" opacity="0.3"/>
+    <circle cx="600" cy="450" r="25" fill="#444444" opacity="0.3"/>
+    <circle cx="400" cy="300" r="30" fill="#444444" opacity="0.3"/>
+    
+    <line x1="200" y1="150" x2="400" y2="300" stroke="#555555" stroke-width="2" opacity="0.2"/>
+    <line x1="400" y1="300" x2="600" y2="450" stroke="#555555" stroke-width="2" opacity="0.2"/>
+    <line x1="600" y1="450" x2="700" y2="200" stroke="#555555" stroke-width="2" opacity="0.2"/>
+    <line x1="700" y1="200" x2="400" y2="300" stroke="#555555" stroke-width="2" opacity="0.2"/>
+  </g>
+  
+  <!-- Data bits flowing through the blockchain -->
+  <g>
+    <circle cx="120" cy="50" r="3" fill="white" opacity="0.7">
+      <animate attributeName="cx" from="50" to="150" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="70" r="2" fill="white" opacity="0.6">
+      <animate attributeName="cy" from="50" to="150" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="250" r="3" fill="white" opacity="0.7">
+      <animate attributeName="cx" from="150" to="250" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="370" r="2" fill="white" opacity="0.6">
+      <animate attributeName="cy" from="320" to="420" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg> 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake - WFinance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/wolf.jpg" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/wolf.jpg" alt="WFinance Logo" class="logo-img">
+                <h1>WFinance</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Ana Sayfa</a></li>
+                    <li><a href="portfolio.html">Portföy</a></li>
+                    <li><a href="swap.html">Takas</a></li>
+                    <li><a href="transfer.html">Transfer</a></li>
+                    <li><a href="stake.html" class="active">Stake</a></li>
+                    <li><a href="history.html">İşlem Geçmişi</a></li>
+                    <li><a href="help.html">Yardım</a></li>
+                </ul>
+            </nav>
+            <div class="right-nav">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="language-select">
+                    <select id="language-selector">
+                        <option value="tr">Türkçe</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="wallet-connect">
+                    <button id="connect-wallet" class="btn btn-primary">Cüzdan Bağla</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="stake" class="stake-section">
+            <div class="container">
+                <h2>Token Stake</h2>
+                <div class="stake-options">
+                    <div class="stake-card">
+                        <div class="stake-header">
+                            <h3>ETH Stake</h3>
+                            <p class="apy">APY: 5.2%</p>
+                        </div>
+                        <div class="stake-body">
+                            <p>Minimum Stake: 0.1 ETH</p>
+                            <p>Stake Süresi: 30 gün</p>
+                            <div class="stake-amount">
+                                <input type="number" placeholder="Miktar">
+                                <span>ETH</span>
+                            </div>
+                            <button class="btn btn-primary">Stake Et</button>
+                        </div>
+                    </div>
+                    
+                    <div class="stake-card">
+                        <div class="stake-header">
+                            <h3>USDT Stake</h3>
+                            <p class="apy">APY: 8.5%</p>
+                        </div>
+                        <div class="stake-body">
+                            <p>Minimum Stake: 100 USDT</p>
+                            <p>Stake Süresi: 90 gün</p>
+                            <div class="stake-amount">
+                                <input type="number" placeholder="Miktar">
+                                <span>USDT</span>
+                            </div>
+                            <button class="btn btn-primary">Stake Et</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="notification-container">
+        <!-- Bildirimler dinamik olarak buraya eklenecek -->
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>WFinance</h2>
+                    <p>Merkeziyetsiz Finans Platformu</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="main.html">Ana Sayfa</a></li>
+                        <li><a href="portfolio.html">Portföy</a></li>
+                        <li><a href="swap.html">Takas</a></li>
+                        <li><a href="stake.html">Stake</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi Takip Edin</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WFinance. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Token Seçim Modalı -->
+    <div class="modal" id="token-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Token Seçin</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="search-token">
+                    <input type="text" placeholder="Token ara...">
+                </div>
+                <div class="token-list">
+                    <div class="token-item" data-symbol="ETH">
+                        <img src="img/ethereum.jpg" alt="Ethereum">
+                        <div class="token-info">
+                            <h4>Ethereum</h4>
+                            <p>ETH</p>
+                        </div>
+                    </div>
+                    <div class="token-item" data-symbol="USDT">
+                        <img src="img/tether.jpg" alt="Tether">
+                        <div class="token-info">
+                            <h4>Tether</h4>
+                            <p>USDT</p>
+                        </div>
+                    </div>
+                    <div class="token-item" data-symbol="BTC">
+                        <img src="img/bitcoin.jpg" alt="Bitcoin">
+                        <div class="token-info">
+                            <h4>Bitcoin</h4>
+                            <p>BTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cüzdan Bağlantı Modalı -->
+    <div class="modal" id="wallet-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cüzdan Bağla</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="wallet-options">
+                    <div class="wallet-option" data-wallet="metamask">
+                        <img src="img/metamask.jpg" alt="MetaMask">
+                        <h4>MetaMask</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bildirimler Modalı -->
+    <div id="notifications-modal" class="notifications-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Bildirimler</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="notifications-list">
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                        <h4>Takas İşlemi Başarılı</h4>
+                        <p>0.1 ETH başarıyla USDT'ye takas edildi.</p>
+                        <span class="notification-time">2 dakika önce</span>
+                    </div>
+                </div>
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="notification-content">
+                        <h4>Stake İşlemi Başarılı</h4>
+                        <p>1 ETH stake edildi. APY: %5.2</p>
+                        <span class="notification-time">1 saat önce</span>
+                    </div>
+                </div>
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="notification-content">
+                        <h4>Cüzdan Bağlandı</h4>
+                        <p>MetaMask cüzdanınız başarıyla bağlandı.</p>
+                        <span class="notification-time">2 saat önce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
